@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            txtNome = new TextBox();
+            txtEmail = new TextBox();
+            txttelefone = new TextBox();
+            txtEndereco = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -39,33 +39,33 @@
             btnCadastrarCliente = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txtNome
             // 
-            textBox1.Location = new Point(14, 24);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(181, 23);
-            textBox1.TabIndex = 0;
+            txtNome.Location = new Point(14, 24);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(181, 23);
+            txtNome.TabIndex = 0;
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Location = new Point(227, 24);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(194, 23);
-            textBox2.TabIndex = 1;
+            txtEmail.Location = new Point(227, 24);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(194, 23);
+            txtEmail.TabIndex = 1;
             // 
-            // textBox3
+            // txttelefone
             // 
-            textBox3.Location = new Point(14, 74);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(147, 23);
-            textBox3.TabIndex = 2;
+            txttelefone.Location = new Point(14, 74);
+            txttelefone.Name = "txttelefone";
+            txttelefone.Size = new Size(147, 23);
+            txttelefone.TabIndex = 2;
             // 
-            // textBox4
+            // txtEndereco
             // 
-            textBox4.Location = new Point(190, 74);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(231, 23);
-            textBox4.TabIndex = 3;
+            txtEndereco.Location = new Point(190, 74);
+            txtEndereco.Name = "txtEndereco";
+            txtEndereco.Size = new Size(231, 23);
+            txtEndereco.TabIndex = 3;
             // 
             // label1
             // 
@@ -111,6 +111,7 @@
             btnCadastrarCliente.TabIndex = 6;
             btnCadastrarCliente.Text = "Cadastrar Cliente";
             btnCadastrarCliente.UseVisualStyleBackColor = true;
+            btnCadastrarCliente.Click += btnCadastrarCliente_Click;
             // 
             // FrmCadastrarCliente
             // 
@@ -122,22 +123,23 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtEndereco);
+            Controls.Add(txttelefone);
+            Controls.Add(txtEmail);
+            Controls.Add(txtNome);
             Name = "FrmCadastrarCliente";
             Text = "FrmCadastarCliente";
+            Load += FrmCadastrarCliente_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox txtNome;
+        private TextBox txtEmail;
+        private TextBox txttelefone;
+        private TextBox txtEndereco;
         private Label label1;
         private Label label2;
         private Label label3;

@@ -10,7 +10,7 @@ namespace NomeSobreNomeClass
 {
     public class Cliente
     {
-        public int ID;
+        public int ID { get; set; }
         public string Nome {  get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
@@ -59,8 +59,8 @@ namespace NomeSobreNomeClass
         {
             var cmd = Banco.abrir();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"insert into Clientes (nome, email, telefone, endereco) VALUES ({Nome},{Email},{Telefone},{Endereco})";
-            cmd.ExecuteReader();
+            cmd.CommandText = $"insert into Clientes (nome, email, telefone, endereco) VALUES ('{Nome}','{Email}','{Telefone}','{Endereco}')";
+            cmd.ExecuteNonQuery();
             cmd.Connection.Close();
 
         }

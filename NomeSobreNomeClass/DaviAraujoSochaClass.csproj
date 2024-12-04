@@ -10,5 +10,10 @@
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="9.1.0" />
   </ItemGroup>
+	<ItemGroup>
+    <Reference Include="DaviAraujoSochaClass">
+      <HintPath>..\\bin\Debug\net8.0\DaviAraujoSochaDesk.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>
