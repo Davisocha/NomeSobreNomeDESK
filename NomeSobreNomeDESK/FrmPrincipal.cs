@@ -21,5 +21,14 @@ namespace DaviAraujoSochaDesk
         {
 
         }
+
+        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCadastrarCliente frmCadastarCliente = new();
+            frmCadastarCliente.MdiParent = this;
+            frmCadastarCliente.Show();
+        }
+
+
     }
 }
